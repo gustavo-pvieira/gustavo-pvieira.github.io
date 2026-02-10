@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== FUNDO ANIMADO (FUNCIONA NO MOBILE) ===== */
+body {
+  color: white;
+  min-height: 100vh;
+
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+  animation: hueMove 10s linear infinite;
+}
+
+/* animação por cor (não trava no mobile) */
+@keyframes hueMove {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Header */
+header {
+  background: transparent;
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #38bdf8;
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #38bdf8;
+  text-align: center;
+}
+
+/* Projetos */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.projeto {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+.projeto h3 {
+  margin-bottom: 10px;
+}
+
+.projeto p {
+  line-height: 1.5;
+}
+
+.tecnologias {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  font-style: italic;
+}
+
+/* Link do projeto */
+.link-projeto {
+  display: inline-block;
+  margin-top: 15px;
+  color: #38bdf8;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.link-projeto:hover {
+  color: #0ea5e9;
+  transform: translateX(3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+}
+
+/* Animações */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#sobre p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Contato */
+#contato {
+  text-align: center;
+}
+
+.contato-texto {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+.contato-info p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.contato-info a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contato-info a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+
+  h2 {
+    transform: translateY(-10px);
+  }
+
+  body {
+    animation-duration: 10s; /* mais suave no celular */
+  }
+}
